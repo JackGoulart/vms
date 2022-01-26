@@ -16,7 +16,7 @@ schema_view = get_schema_view(
         contact=openapi.Contact(email="dev@vms.com"),
         license=openapi.License(name="copyleft"),
     ),
-    public=False,
+    public=True,
     permission_classes=(permissions.AllowAny,),
 )
 

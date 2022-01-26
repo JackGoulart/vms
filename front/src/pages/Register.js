@@ -109,7 +109,7 @@ const Register = () => {
           required
           fullWidth
           name="passwordCofirm"
-          label="comfirme a senha"
+          label="confirme a senha"
           type="password"
           id="passwordCofirm"
           onChange={(e) => onChange(e)}
