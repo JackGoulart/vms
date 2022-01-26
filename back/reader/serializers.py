@@ -74,16 +74,3 @@ class CsvFileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CsvFile
         fields = ["id", "name", "write"]
-
-
-    # def paginated_rows(self, obj):
-    #     page_size = self.context['request'].query_params.get('size') or 50
-    #     paginator = Paginator(obj.csv_rows.all(), page_size)
-    #     page_number = self.context['request'].query_params.get('page') or 1
-    #     csv_rows = paginator.page(page_number)
-    #     serializer = CsvRowsSerializer(csv_rows,read_only=True, many=True)
-    #     return serializer.data
-
-# if row[publication_date] != 'NaTType' else None
-
-# reader_df[headers[-1]] = reader_df[headers[-1]].fillna('2000-01-09')

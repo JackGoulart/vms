@@ -4,6 +4,9 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 
 class UserManager(BaseUserManager):
+    """
+       Modelo para criacao do admin customizado
+    """
     def create_superuser(self, email, name, password, **other_fields):
         other_fields.setdefault('is_staff', True)
         other_fields.setdefault('is_superuser', True)
@@ -31,6 +34,9 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    """
+       Modelo para criacao do usuario customizado
+    """
     email = models.EmailField(_('email address'), unique=True)
     name = models.CharField(max_length=200)
     is_staff = models.BooleanField(default=False)
